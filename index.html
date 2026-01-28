@@ -2,71 +2,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>טיפול רגשי מקצועי לילדים ומבוגרים — מוטי שוחט</title>
-<meta name="description" content="מוטי שוחט מציע טיפול רגשי מקצועי לילדים, נוער ומבוגרים. התמחות בטיפול בחרדה ודיכאון, טיפול זוגי ומטפל רגשי בתת מודע. פנו עכשיו!">
-<meta name="keywords" content="מוטי שוחט, טיפול בחרדה ודיכאון, מטפל רגשי בתת מודע, טיפול זוגי, טיפול רגשי לילדים">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<style>
-/* Zappy Attribution Header Styles */
-.zappy-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
-  padding: 16px 10px;
-  text-align: center;
-  font-family: 'Nunito', sans-serif;
-  font-size: 16px;
-  color: #4a4a4a;
-  line-height: 21px;
-  z-index: 99999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 21px;
-  direction: ltr !important;
-  unicode-bidi: isolate;
-}
-
-    .zappy-header p {
-      margin: 0;
-      padding: 0;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 21px;
-      white-space: nowrap;
-      display: inline-block;
-      vertical-align: baseline;
-      margin-bottom: 0 !important;
-      direction: ltr !important;
-    }
-
-.zappy-header .zappy-link {
-  font-weight: 700;
-  color: #4a4a4a;
-  text-decoration: none;
-  transition: opacity 0.2s;
-}
-
-.zappy-header .zappy-link:hover {
-  opacity: 0.7;
-}</style>
-    <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
-    <!-- Mickidum Accessibility Toolbar -->
-    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-<!-- Zappy Analytics -->
+<meta name="description" content="מוטי שוחט מציע טיפול רגשי מקצועי לילדים, נוער ומבוגרים. התמחות בטיפול בחרדה ודיכאון, טיפול זוגי ומטפל רגשי בתת מודע. פנו עכשיו!"><!-- Zappy Analytics -->
 <script>
 (function() {
   'use strict';
@@ -269,67 +205,118 @@
 </script>
 <!-- End Zappy Analytics -->
 
-    <style id="zappy-mobile-submenu-styles">
-      /* Mobile submenu accordion styles */
+    <style id="zappy-dropdown-submenu-styles">
+      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
+      /* Base styles for dropdown submenus - parent must be positioned */
+      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
+      /* Submenu base - hidden by default */
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      /* CRITICAL: Desktop hover styles to show dropdown */
+      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Submenu item styling */
+      .sub-menu li { list-style: none; margin: 0; padding: 0; }
+      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+      .sub-menu a:hover { background-color: #f5f5f5; }
+      /* RTL (Hebrew/Arabic) dropdown positioning */
+      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
+      /* Hide empty dropdown menus */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Desktop: show submenu on Menu Group hover */
+      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Menu Group title styling */
+      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
+      
+      /* ========== MOBILE SUBMENU STYLES ========== */
       @media (max-width: 768px) {
-        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
-          position: static !important;
-          transform: none !important;
-          box-shadow: none !important;
-          background: transparent !important;
-          margin-top: 0 !important;
-          max-height: 0;
-          overflow: hidden;
-          opacity: 0;
-          visibility: hidden;
-          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
-          padding: 0 !important;
-          border-radius: 0 !important;
-        }
-        .sub-menu.mobile-expanded {
-          max-height: 500px !important;
-          opacity: 1 !important;
-          visibility: visible !important;
-          padding: 8px 0 8px 16px !important;
-        }
-        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
-          padding: 8px 16px 8px 0 !important;
-        }
-        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
-          opacity: 0; visibility: hidden; pointer-events: none;
-        }
-        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
-          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
-        }
-        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
-          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
-        }
-        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
-          flex: 1 !important;
-        }
-        .mobile-submenu-toggle {
-          display: flex !important; align-items: center !important; justify-content: center !important;
-          width: 44px !important; height: 44px !important; background: transparent !important;
-          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
-          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
-        }
-        .mobile-submenu-toggle::after {
-          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
-          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
-          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
-        }
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
+        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
+        /* Disable hover behavior on mobile */
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; }
+        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
+        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; }
+        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
         .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
-        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
-          flex-basis: 100% !important; width: 100% !important;
-        }
-        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
-        .sub-menu a:hover { background-color: transparent !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; }
       }
       @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
     </style>
     <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
+</head><body>טיפול בטראומות,&nbsp;, טיפול זוגי ומטפל רגשי בתת מודע. פנו עכשיו!"&gt;
+<meta name="keywords" content="מוטי שוחט - טיפול משנה חיים, <span style=" text-align: center;">טיפול בטראומות,&nbsp;, מטפל רגשי בתת מודע, טיפול זוגי, 
+
+<font color="#4a4a4a"><font color="#1a1a1a">זוגיות</font></font>, אהבה ומערכות יחסים
+
+"&gt;
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<style>
+/&nbsp;<br><span>&nbsp;מימוש והגשמה עצמית - שחרור אמונות מגבילות, חסמים, מציאת הייעוד.&nbsp;&nbsp;<br></span><br><span>הגשמה עיסקית - נבין מה יעזור להקפיץ את העסק קדימה!</span><br class="Apple-interchange-newline"> Zappy Attribution Header Styles &nbsp;<br><span>&nbsp;מימוש והגשמה עצמית - שחרור אמונות מגבילות, חסמים, מציאת הייעוד.&nbsp;&nbsp;<br></span><br><span>הגשמה עיסקית - נבין מה יעזור להקפיץ את העסק קדימה!</span><br class="Apple-interchange-newline">/
+.zappy-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 4px 19px 0px rgba(0,0,0,0.04);
+  padding: 16px 10px;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #4a4a4a;
+  line-height: 21px;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 21px;
+  direction: ltr !important;
+  unicode-bidi: isolate;
+}
+
+    .zappy-header p {
+      margin: 0;
+      padding: 0;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 21px;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: baseline;
+      margin-bottom: 0 !important;
+      direction: ltr !important;
+    }
+
+.zappy-header .zappy-link {
+  font-weight: 700;
+  color: #4a4a4a;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.zappy-header .zappy-link:hover {
+  opacity: 0.7;
+}</style>
+    <!-- Cookie Consent -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <!-- Mickidum Accessibility Toolbar -->
+    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+
+
 
 <!-- Zappy Attribution Header -->
 <div id="zappy-attribution-header" class="zappy-header" style="display: none;">
@@ -339,20 +326,20 @@
 <div class="container nav-container">
 <div class="nav-brand">
 <a href="/" class="logo-link">
-<img src="/assets/logo.webp" alt="מוטי שוחט" class="logo" />
+<img src="/assets/logo-1767196030267-5m6ksg.webp?v=1767196030784-rmtw8a" alt="מוטי שוחט - טיפול משנה חיים" class="logo">
 </a>
 </div>
 <button class="mobile-toggle" id="mobileToggle" aria-label="תפריט">
 <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-<path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+<path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </svg>
 <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-<path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+<path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </svg>
 </button>
 <button class="phone-header-btn" aria-label="התקשרו אלינו">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
 </svg>
 </button>
 <ul class="nav-menu" id="navMenu">
@@ -360,141 +347,435 @@
 <li><a href="/about">אודות</a></li>
 </ul>
 <div class="nav-cta-container">
-<li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li>
+<li class="nav-cta-item"><a href="#" class="nav-cta-btn" data-original-href="#" style="background-color: #6ba3d4 !important; border-color: #6ba3d4 !important; color: #ffffff !important" data-element-type="button">צור קשר</a></li>
 </div>
 </div>
 </nav>
-<section class="hero">
-<div class="hero-overlay"></div>
-<img data-placeholder="hero-1" data-context="חדר טיפול רגשי מרגיע ומזמין עם כורסאות נוחות, תאורה עדינה וצמחייה טבעית היוצרים אווירה של ביטחון ושלווה" src="/assets/hero-hero-1.webp" alt="חדר טיפול רגשי מקצועי של מוטי שוחט" class="hero-img">
-<div class="container hero-content">
-<h1>טיפול רגשי שמשנה חיים</h1>
-<h3>מוטי שוחט מציע טיפול מקצועי ואישי לילדים, נוער ומבוגרים המתמודדים עם אתגרים רגשיים</h3>
-<a href="/contact" class="btn-primary">קבעו פגישת ייעוץ ראשונית</a>
-</div>
+<section class="hero-section" dir="rtl" data-zappy-section="true" id="temp-section-1768321202282-1768406206766-p0l1baaqo">
+  <style>
+    .hero-section {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      font-family: system-ui, sans-serif;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+    }
+
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(107, 163, 212, 0.85) 0%, rgba(74, 144, 196, 0.75) 50%, rgba(168, 213, 186, 0.65) 100%);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      max-width: 900px;
+      padding: 3rem;
+      text-align: center;
+      animation: fadeInUp 1.2s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-content h1 {
+      font-size: clamp(3rem, 8vw, 6rem);
+      font-weight: 900;
+      color: var(--light-text);
+      margin: 0 0 2rem 0;
+      line-height: 1.1;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      letter-spacing: -2px;
+      animation: fadeInUp 1.2s ease-out 0.2s both;
+    }
+
+    .hero-content h3 {
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      font-weight: 400;
+      color: var(--light-text);
+      line-height: 1.8;
+      margin: 0 0 3rem 0;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      animation: fadeInUp 1.2s ease-out 0.4s both;
+      max-width: 750px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-cta {
+      animation: fadeInUp 1.2s ease-out 0.6s both;
+    }
+
+    .hero-cta a {
+      display: inline-block;
+      padding: 1.5rem 3.5rem;
+      background: var(--light-text);
+      color: var(--accent-color);
+      font-size: 1.3rem;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 50px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-cta a::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: var(--accent-color);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s ease, height 0.6s ease;
+      z-index: -1;
+    }
+
+    .hero-cta a:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.4);
+      color: var(--light-text);
+    }
+
+    .hero-cta a:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .floating-shapes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .shape {
+      position: absolute;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      animation: float 20s infinite ease-in-out;
+    }
+
+    .shape:nth-child(1) {
+      width: 300px;
+      height: 300px;
+      top: 10%;
+      left: 5%;
+      animation-delay: 0s;
+      animation-duration: 25s;
+    }
+
+    .shape:nth-child(2) {
+      width: 200px;
+      height: 200px;
+      top: 60%;
+      left: 80%;
+      animation-delay: 3s;
+      animation-duration: 20s;
+    }
+
+    .shape:nth-child(3) {
+      width: 150px;
+      height: 150px;
+      top: 80%;
+      left: 15%;
+      animation-delay: 6s;
+      animation-duration: 22s;
+    }
+
+    .shape:nth-child(4) {
+      width: 250px;
+      height: 250px;
+      top: 20%;
+      left: 85%;
+      animation-delay: 2s;
+      animation-duration: 28s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) translateX(0) scale(1);
+      }
+      25% {
+        transform: translateY(-30px) translateX(20px) scale(1.1);
+      }
+      50% {
+        transform: translateY(-60px) translateX(-20px) scale(0.9);
+      }
+      75% {
+        transform: translateY(-30px) translateX(30px) scale(1.05);
+      }
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      animation: bounce 2s infinite;
+    }
+
+    .scroll-indicator svg {
+      width: 30px;
+      height: 30px;
+      fill: var(--light-text);
+      filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.3));
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+      }
+      40% {
+        transform: translateX(-50%) translateY(-20px);
+      }
+      60% {
+        transform: translateX(-50%) translateY(-10px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-content {
+        padding: 2rem 1.5rem;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-content h3 {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .hero-cta a {
+        padding: 1.2rem 2.5rem;
+        font-size: 1.1rem;
+      }
+
+      .shape {
+        display: none;
+      }
+    }
+  </style>
+
+  <div class="hero-bg" style="background-image: url(&quot;assets/business-general-service-upload-1768142209697.webp&quot;);  background-size: cover; background-position: center;"></div>
+  
+  <div class="floating-shapes">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1><font color="#175899"><font color="#4a90c4">טיפול רגשי שמשנה חיים</font><span>&nbsp;<br><span>&nbsp;</span><span style="font-weight: normal;">כשתמצא.י את המקום המדויק שלך בפאזל של חייך</span></span>&nbsp;<br><span>&nbsp; ה</span><span><span style="font-weight: normal;">כל מסביבך יתחיל להסתדר בהרמוניה</span></span></font></h1>
+    <h3>היי, שמי מוטי שוחט - טיפול משנה חיים ואני אשמח לעזור לך להחזיר את השלווה, הרוגע, הביטחון הפנימי והאיזון הרגשי והפיזי. להחזיר את האופטימיות ולהעניק לך כלים שיאפשרו לך ליצור כל שינוי חיובי שהנך רוצה.כבר בשיחת הטלפון הראשונה, אבין מה השורש ואסביר כיצד השינוי מתבצע במספר פגישות שמשנות חיים ממש.</h3>
+    <div class="hero-cta">
+      <a href="/contact">קבעו פגישת ייעוץ ראשונית</a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+    </svg>
+  </div>
 </section>
-<section class="intro-section">
-<div class="container">
-<div class="intro-content">
-<h2>ברוכים הבאים למרחב הטיפולי של מוטי שוחט</h2>
-<p>כמטפל רגשי מנוסה, אני מתמחה בליווי ילדים, בני נוער ומבוגרים בדרכם להתמודדות עם קשיים רגשיים. הגישה הטיפולית שלי משלבת טכניקות מתקדמות של טיפול בחרדה ודיכאון יחד עם עבודה עם התת מודע, ומאפשרת שינוי אמיתי ומשמעותי.</p>
-<p>בסביבה טיפולית בטוחה ותומכת, אני מסייע למטופלים שלי לפתח כלים רגשיים, להבין את עצמם טוב יותר ולהשיג איזון נפשי. כל מסע טיפולי מותאם אישית לצרכים הייחודיים של כל אדם ואדם.</p>
-</div>
-</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section id="layout-1768148788293" class="layout-section" data-zappy-component="true" style="width: 100%; padding: 60px 0; direction: rtl;" data-component-id="collection-boxes">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+  <h2 style="font-size: 32px; font-weight: 700; color: #4A4A4A; margin-bottom: 40px; text-align: center; font-family: Rubik, sans-serif;"><font color="#4a90c4">טיפול רגשי שמשנה חיים</font></h2>
+  <div class="text-boxes-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 25px;">
+    <div style="padding: 25px; background: #6ba3d410; border: 2px solid #6ba3d430; border-radius: 8px;">
+      <h3 style="font-size: 20px; font-weight: 600; color: #4A4A4A; margin-bottom: 10px; font-family: Rubik, sans-serif;">כותרת כרטיס 1</h3>
+      <p style="font-size: 16px; line-height: 1.6; color: #4A4A4A; opacity: 0.8; font-family: Rubik, sans-serif;">טקסט תיאור קצר</p>
+    </div>
+    <div style="padding: 25px; background: #6ba3d410; border: 2px solid #6ba3d430; border-radius: 8px;">
+      <h3 style="font-size: 20px; font-weight: 600; color: #4A4A4A; margin-bottom: 10px; font-family: Rubik, sans-serif;">כותרת כרטיס 2</h3>
+      <p style="font-size: 16px; line-height: 1.6; color: #4A4A4A; opacity: 0.8; font-family: Rubik, sans-serif;">טקסט תיאור קצר</p>
+    </div>
+    <div style="padding: 25px; background: #6ba3d410; border: 2px solid #6ba3d430; border-radius: 8px;">
+      <h3 style="font-size: 20px; font-weight: 600; color: #4A4A4A; margin-bottom: 10px; font-family: Rubik, sans-serif;">כותרת כרטיס 3</h3>
+      <p style="font-size: 16px; line-height: 1.6; color: #4A4A4A; opacity: 0.8; font-family: Rubik, sans-serif;">טקסט תיאור קצר</p>
+    </div>
+  </div>
+  </div>
 </section>
-<section class="services-preview">
-<div class="container">
-<h2>תחומי ההתמחות שלי</h2>
-<div class="services-grid">
-<div class="service-card">
-<img data-placeholder="service-1" data-context="ילד יושב עם מטפל רגשי בחדר טיפול ידידותי, משחקים טיפוליים על השולחן, אווירה חמה ומזמינה" src="/assets/service-service-1.webp" alt="טיפול רגשי לילדים עם מוטי שוחט" class="service-img">
-<h3>טיפול רגשי לילדים</h3>
-<p>ליווי רגשי לילדים המתמודדים עם קשיים התנהגותיים, חרדות, קשיי הסתגלות ובעיות בביטוי רגשות. באמצעות משחק טיפולי ושיחה מותאמת גיל.</p>
-</div>
-<div class="service-card">
-<img data-placeholder="service-2" data-context="נער יושב מול מטפל במפגש טיפולי, שיחה פתוחה ואמפתית, סביבה בטוחה ותומכת" src="/assets/service-service-2.webp" alt="טיפול רגשי לנוער - מוטי שוחט" class="service-img">
-<h3>טיפול לבני נוער</h3>
-<p>תמיכה רגשית לנוער המתמודד עם משברי זהות, לחץ חברתי, בעיות בבית הספר וקשיים במעבר לבגרות. יצירת מרחב בטוח לביטוי עצמי.</p>
-</div>
-<div class="service-card">
-<img data-placeholder="service-3" data-context="מפגש טיפולי עם מבוגר, שיחה עמוקה ואינטימית בחדר טיפול מקצועי, אווירה של אמון ופתיחות" src="/assets/service-service-3.webp" alt="טיפול בחרדה ודיכאון למבוגרים" class="service-img">
-<h3>טיפול בחרדה ודיכאון</h3>
-<p>מוטי שוחט מתמחה בטיפול בהפרעות חרדה, דיכאון, מצבי לחץ ומשברים אישיים. שימוש בטכניקות מוכחות ליצירת שינוי משמעותי ולשיפור איכות החיים.</p>
-</div>
-</div>
-<a href="/services" class="btn-secondary">לכל השירותים</a>
-</div>
-</section>
-<section class="approach-section">
+
+
+
+
+
+
+<section class="approach-section" id="zappy-section-4">
 <div class="container">
 <div class="approach-split">
 <div class="approach-text">
-<h2>הגישה הטיפולית שלי</h2>
-<p>כמטפל רגשי בתת מודע, אני משלב בעבודתי כלים מגוונים המאפשרים גישה לשכבות עמוקות יותר של התודעה. הטיפול בתת מודע מאפשר לטפל בשורשי הבעיות הרגשיות ולא רק בסימפטומים החיצוניים.</p>
-<p>הגישה שלי מבוססת על יצירת קשר טיפולי איכותי, אמפתיה עמוקה והתאמה אישית של הטיפול לכל מטופל. אני מאמין שכל אדם נושא בתוכו את הכוח לשינוי, ותפקידי הוא לסייע לו לגלות ולממש את הפוטנציאל הזה.</p>
-<p>במהלך השנים ליוויתי מאות מטופלים בדרכם לריפוי רגשי, והצלחתי לראות שינויים משמעותיים בחייהם. כל סיפור הצלחה מחזק את המחויבות שלי לעבודה הטיפולית.</p>
+<h2 style="font-weight: 500;"><font color="#4a90c4">הגישה הטיפולית שלי</font></h2>
+<p><span>כמטפל רגשי בתת מודע, אני משלב בעבודתי כלים מגוונים המאפשרים גישה לשכבות עמוקות יותר של התודעה, כגון קינסיולוגיה ובדיקות שריר.<br><span style="font-weight: normal;">הטיפול בתת מודע מאפשר לטפל בשורשי הבעיות הרגשיות ולא רק בסימפטומים החיצוניים.</span></span></p>
+<p><span>הגישה שלי מבוססת על יצירת קשר טיפולי איכותי, אמפתיה עמוקה והתאמה אישית של הטיפול לכל מטופל. אני מאמין שכל אדם נושא בתוכו את הכוח לשינוי, ותפקידי הוא לסייע לו לגלות ולממש את הפוטנציאל הזה.</span></p>
+<p><span>במהלך השנים ליוויתי אלפי מטופלים בדרכם לריפוי רגשי, מחשבתי ופיזי, טיפול ששינה את חייהם מקצה לקצה, וגם השפיע לטובה על החיים של הקרובים להם בעקבות כך :)</span></p>
 </div>
 <div class="approach-image">
-<img data-placeholder="service-4" data-context="מטפל רגשי יושב בחדר טיפול מעוצב בסגנון מרגיע, ספרים מקצועיים ברקע, אווירה של מקצועיות וחום" src="/assets/service-service-4.webp" alt="מוטי שוחט - מטפל רגשי בתת מודע" class="approach-img">
+<img data-placeholder="service-4" data-context="מטפל רגשי יושב בחדר טיפול מעוצב בסגנון מרגיע, ספרים מקצועיים ברקע, אווירה של מקצועיות וחום" src="/assets/business-general-service-upload-1768405917245.webp" alt="מוטי שוחט - טיפול משנה חיים - מטפל רגשי בתת מודע" class="approach-img zappy-editable-image" data-element-type="image" data-element-id="img-1768405704842-ajjw79312" style="position: relative; object-position: 50% 50%; width: 290px; max-width: 100%; display: block; margin: 24px; object-fit: contain; height: auto; border-radius: 8px;" data-original-position="static" data-pixel-width="290">
 </div>
 </div>
 </div>
 </section>
-<section class="specializations-section">
+
+<section id="layout-1769597501056" class="layout-section" data-zappy-component="true" style="width: 100%; padding: 60px 0; direction: rtl;" data-component-id="basic-text-only">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+    <div style="max-width: 800px; margin: 0 auto;">
+      <h2 style="font-size: 32px; font-weight: 700; color: #4A4A4A; margin-bottom: 20px; font-family: Rubik, sans-serif;">כותרת שלך כאן</h2>
+      <p style="font-size: 18px; line-height: 1.6; color: #4A4A4A; opacity: 0.8; font-family: Rubik, sans-serif;">הוסף את תוכן הטקסט שלך כאן. זהו טקסט ממלא מקום שניתן לערוך.</p>
+    </div>
+  </div>
+  
+</section>
+
+<section class="services-preview" id="section-1768144650936-oq9bqzccu-1768410201319-fhoying2m">
 <div class="container">
-<h2>תחומי טיפול נוספים</h2>
-<div class="specializations-list">
-<div class="spec-item">
-<i class="fas fa-heart"></i>
-<h3>טיפול זוגי</h3>
-<p>ליווי זוגות בשיפור התקשורת, פתרון קונפליקטים והעמקת הקשר הרגשי. מוטי שוחט מסייע לזוגות למצוא דרכים חדשות להתחבר ולבנות מערכת יחסים בריאה יותר.</p>
-</div>
-<div class="spec-item">
-<i class="fas fa-users"></i>
-<h3>טיפול משפחתי</h3>
-<p>עבודה עם המשפחה כמערכת שלמה, שיפור דינמיקות משפחתיות ופתרון קונפליקטים. יצירת סביבה משפחתית תומכת ובריאה יותר.</p>
-</div>
-<div class="spec-item">
-<i class="fas fa-brain"></i>
-<h3>עבודה עם התת מודע</h3>
-<p>כמטפל רגשי בתת מודע, אני משתמש בטכניקות מתקדמות לגישה לתת המודע ולטיפול בדפוסים רגשיים עמוקים. זהו כלי רב עוצמה לשינוי משמעותי.</p>
-</div>
-<div class="spec-item">
-<i class="fas fa-shield-alt"></i>
-<h3>התמודדות עם טראומה</h3>
-<p>ליווי רגיש ומקצועי בעיבוד חוויות טראומטיות, הפחתת תסמיני פוסט טראומה ובניית תחושת ביטחון פנימי.</p>
-</div>
-</div>
+<h2 style="font-weight: 500;">תחומי ההתמחות שלי</h2>
+<div class="services-grid zappy-preserve-css-grid" style="display: grid; --zappy-grid-cols: repeat(3, minmax(0, 1fr));" data-original-item-width="321" data-original-gap="32px" data-zappy-explicit-columns="true" id="zappy-auto-grid-1768146606621-lt6xhr-dup-1768410201317-0" data-zappy-auto-grid="true" data-zappy-display-mode="carousel"><div class="service-card" style="background-color: rgb(255, 255, 255) !important; padding: 24px !important; box-sizing: border-box;">
+<img data-placeholder="image-placeholder" data-context="מפגש טיפולי עם מבוגר, שיחה עמוקה ואינטימית בחדר טיפול מקצועי, אווירה של אמון ופתיחות" src="/assets/business-general-service-upload-1768408625166.webp" alt="Image placeholder" class="service-img zappy-editable-image" data-element-type="image" data-element-id="new-grid-img-1768408541881-0-6ama6ptj5" style="object-position: 50% 50%; object-fit: cover; position: relative; cursor: pointer; width: auto; max-width: 100%; display: block; margin-left: auto; margin-right: auto;" data-original-position="static" id="new-grid-img-1768408541881-0-6ama6ptj5-dup-1768410201317-1" data-ai-slot="grid-item-image">
+<h3 style="font-family: Rubik, sans-serif; cursor: text;" class>
+
+טיפול רגשי עוצמתי ומדויק בתת מודע וב'ילד הפנימי'
+
+</h3>
+<ul><li class><span style="list-style-type: disc; font-size: 12pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;"><b>בטחון עצמי וערך עצמי נמוכים</b></span></li><li class><span style="list-style-type: disc; font-size: 12pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;"><b>פחדים וחרדות</b></span></li><li class><span style="list-style-type: disc; font-size: 12pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;"><b>דיכאון, תקיעות, חוסר אונים&nbsp;</b></span></li><li class><span style="list-style-type: disc; font-size: 12pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;"><b>מצבי רוח קיצוניים, כעסים, התקפי זעם</b></span></li><li class><span style="list-style-type: disc; font-size: 12pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;"><b>אשמה עצמית, מחשבות שליליות</b></span></li><li class><span style="list-style-type: disc; font-size: 12pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;" class>&nbsp;<b>קונפליקטים לא פתורים, אי שקט</b></span></li><li class style><span style="list-style-type: disc; font-size: 12pt; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;">מימוש והגשמה עצמית - </span><span style="list-style-type: disc; font-size: 12pt; background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;" class>שחרור אמונות 
+מגבילות וחסמים, מציאת הייעוד.&nbsp;</span><span style="list-style-type: disc; font-size: 12pt; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;">&nbsp;</span></li><li class><span style="list-style-type: disc; font-size: 12pt; background-color: transparent; font-weight: 700; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;">הגשמה עיסקית - </span>נבין מה יעזור להקפיץ את העסק קדימה!&nbsp;&nbsp;</li></ul><br>נזהה במדויק את החוויות וה'משקולות' שיש לשחרר ולעבד מחדש כדי לאפשר לך להיות הגרסה הטובה ביותר של עצמך!&nbsp;<br>לממש ולהגשים מה שאת.ה רוצה!<br>בשלווה, שמחה, בטחון פנימי, אמונה בעצמך וביכולותיך, סיפוק ואושר.&nbsp;&nbsp;
+</div><div class="service-card" style>
+<img data-placeholder="service-3" data-context="מפגש טיפולי עם מבוגר, שיחה עמוקה ואינטימית בחדר טיפול מקצועי, אווירה של אמון ופתיחות" src="/assets/business-general-service-upload-1768144638228.webp" alt="טיפול בחרדה ודיכאון למבוגרים" class="service-img zappy-editable-image" data-element-type="image" data-element-id="img-1768142702136-m54s5nyne" style="object-position: 50% 50%; object-fit: cover; position: relative;" data-original-position="static">
+<h3 style="font-family: Rubik, sans-serif;" class><span style="text-align: center;">טיפול בטראומות,&nbsp;</span><span style="text-align: center;">פוסט טראומה מורכבת ומשבר</span></h3>
+<p style="font-family: Rubik, sans-serif;" class><b>
+
+במרחב בטוח, נינוח, מוגן ונטול שיפוטיות</b>,<br class="Apple-interchange-newline"><b>נשחרר עד למינימום, את השפעה של החוויה,</b> על שגרת החיים שלך (ואפילו ניטרול מוחלט במצבים רבים)<br>ניתן כלים להתמודדות יומית,&nbsp;<br>חיזוק והחזרת הביטחון והערך העצמי. 
+
+&nbsp;<br>באמצעות טכניקות לעיבוד מחדש בשיטת IST שפיתחתי.<br><br class="Apple-interchange-newline">בזכות הניסיון הרב,&nbsp;&nbsp;<br>מתאפשר שחרור וצמיחה מ-97% מהמצבים.<br><br><br>טסט של עידו</p>
+</div><div class="service-card" style="background-color: rgb(255, 255, 255) !important; padding: 24px !important; box-sizing: border-box;">
+<img data-placeholder="image-placeholder" data-context="מפגש טיפולי עם מבוגר, שיחה עמוקה ואינטימית בחדר טיפול מקצועי, אווירה של אמון ופתיחות" src="/assets/business-general-service-upload-1768401906984.webp" alt="Image placeholder" class="service-img zappy-editable-image" data-element-type="image" data-element-id="new-grid-img-1768148807493-0-t1o6sh6hd" style="cursor: pointer; object-position: 50% 50%; width: auto; max-width: 100%; display: block; margin-left: auto; margin-right: auto; object-fit: cover; position: relative;" id="new-grid-img-1768148807493-0-t1o6sh6hd-dup-1768410201317-2" data-ai-slot="grid-item-image" data-original-position="static">
+<h3 style="font-family: Rubik, sans-serif; cursor: text; text-align: center;" class>
+
+הורים ילדים ונוער -&nbsp;<br>קשר מעצים ונעים בבית ולכולם :)
+
+</h3>
+<p style="font-family: Rubik, sans-serif; cursor: text;" class><b>ה-נושא שאנו משקיעים בו הכי הרבה זמן ואנרגיה&nbsp;<br>ועדיין רבים מההורים והילדים, חווים בו תסכול גדול.</b><b><br></b><b>הסיבה העיקרית היא:</b><br><b>חוסר הבנה (גדול), אחד של השני.</b><br><b>מצד אחד</b> אותנו ההורים, אף אחד לא לימד את 'סודות הפסיכולוגיה הילדית'<br><b>מצד שני</b> אף אחד (לרוב) לא מתווך לילד את התחושות הפנימיות שלו וכיצד הוא חווה ותופש את התנהגות ההורים.<br>בגדול - יוצא מצב שכל אחד חווה את הצד השני כ-לא מתחשב, לא מבין ולא אכפתי מספיק.<br>כאשר אף אחד מאלה לא נכון בפועל, אבל יוצר שני צדדים מתוסכלים מאד בלשון המעטה.<br><b>מה הפתרון?</b><br><b>רכישת כלים ותיווך נכון ומדויק.</b></p>
+</div><div class="service-card" style="background-color: rgb(255, 255, 255) !important; padding: 24px !important; box-sizing: border-box;">
+<img data-placeholder="image-placeholder" data-context="מפגש טיפולי עם מבוגר, שיחה עמוקה ואינטימית בחדר טיפול מקצועי, אווירה של אמון ופתיחות" src="/assets/business-general-service-upload-1768401889962.webp" alt="Image placeholder" class="service-img zappy-editable-image" data-element-type="image" data-element-id="new-grid-img-1768148818750-0-3s12s7xc3" style="cursor: pointer; object-position: 50% 50%; width: auto; max-width: 100%; display: block; margin-left: auto; margin-right: auto; object-fit: cover; position: relative;" id="new-grid-img-1768148818750-0-3s12s7xc3-dup-1768410201317-3" data-ai-slot="grid-item-image" data-original-position="static">
+<h3 style="font-family: Rubik, sans-serif; cursor: text;" class>פריון, הריון, לידה, תינוקות וילדים</h3>
+<p style="font-family: Rubik, sans-serif; cursor: text;" class><span><span><b>פריון, קשיים בכניסה להריון</b></span>&nbsp;</span><br><span><span><b>עוּברים - מנח עכוז ו'אתגרים' במהלך ההריון&nbsp;</b></span>(הריון בסיכון, סימפטומים שמתגלים במהלך ההריון)&nbsp;</span><br><span><span><b>הריון -</b> התמודדויות עם <b>ההריון עצמו</b> ועם <b>ה<font color="#1a1a1a">זוגיות</font></b></span>&nbsp;</span><br><span style><span><b>תינוקות וילדים - סימפטומים שונים</b> - דפוסי התנהגות שאינם מובנים ומחלה.</span><span style="color: var(--text-color);"><b style><span style="color: var(--text-color);">טיפול בכאב או בסימפטום כלשהו שמציק.</span></b></span>&nbsp;</span><br><span style="color: var(--text-color);">בבדיקת שריר בקינסיולוגיה, ניתן להבין מה המקור לכל מצב וסימפטום.</span><span style="color: var(--text-color);"><br>לכל חוסר איזון וביטוי פיזיולוגי או רגשי שאינו מובן - יש סיבה.</span><span style="color: var(--text-color);">&nbsp;</span><br><span style="color: var(--text-color);">חשוב מאד לזהות את השורש מכיוון שטיפול בו מאפשר ריפוי ואיזון.</span></p>
+</div><div class="service-card" style="background-color: rgb(255, 255, 255) !important; padding: 24px !important; box-sizing: border-box;">
+<img data-placeholder="image-placeholder" data-context="מפגש טיפולי עם מבוגר, שיחה עמוקה ואינטימית בחדר טיפול מקצועי, אווירה של אמון ופתיחות" src="/assets/business-general-service-upload-1768409029285.webp" alt="Image placeholder" class="service-img zappy-editable-image" data-element-type="image" data-element-id="new-grid-img-1768408919922-0-y1lhh3jvi" style="cursor: pointer; object-position: 50% 50%; width: auto; max-width: 100%; display: block; margin-left: auto; margin-right: auto; object-fit: cover; position: relative;" id="new-grid-img-1768408919922-0-y1lhh3jvi-dup-1768410201317-4" data-ai-slot="grid-item-image" data-original-position="static">
+<h3 style="font-family: Rubik, sans-serif; cursor: text;" class>בעיות פיזיולוגיות שונות</h3>
+<p style="font-family: Rubik, sans-serif; cursor: text;" class><span><span style="list-style-type: disc; font-size: 12pt; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;"><b>טיפול בכאב או סימפטום כלשהו שמציק.</b></span></span><br></p>
+</div><div class="service-card" style="background-color: rgb(255, 255, 255) !important; padding: 24px !important; box-sizing: border-box;">
+<img data-placeholder="image-placeholder" data-context="מפגש טיפולי עם מבוגר, שיחה עמוקה ואינטימית בחדר טיפול מקצועי, אווירה של אמון ופתיחות" src="/assets/business-general-service-upload-1768409044090.webp" alt="Image placeholder" class="service-img zappy-editable-image" data-element-type="image" data-element-id="new-grid-img-1768408963743-0-8tovv9b10" style="cursor: pointer; object-position: 50% 50%; width: auto; max-width: 100%; display: block; margin-left: auto; margin-right: auto; object-fit: cover; position: relative;" id="new-grid-img-1768408963743-0-8tovv9b10-dup-1768410201317-5" data-ai-slot="grid-item-image" data-original-position="static">
+<h3 style="font-family: Rubik, sans-serif; cursor: text;" class>בעיות פיזיולוגיות שונות</h3>
+<p style="font-family: Rubik, sans-serif; cursor: text;" class><span><span style="list-style-type: disc; font-size: 12pt; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space: pre;"><b>טיפול בכאב או סימפטום כלשהו שמציק.</b></span></span><br></p>
+</div></div>
+<a href="/services" class="btn-secondary" data-original-href="/services" data-element-type="button" data-element-id="btn-1768401427704-4g0iletdm" data-native-element="true">לכל השירותים</a>
 </div>
 </section>
-<section class="testimonials-section">
+
+<section class="testimonials-section" id="zappy-section-5"><h2 id="element-saved-1768410453545-02c4w54bqh0" class="text-3xl font-bold text-gray-900 mb-4" style="color: #4A4A4A;" data-element-type="h2">&nbsp;<b><font color="#4a90c4"> מה אומרים המטופלים&nbsp;</font></b>&nbsp;</h2>
 <div class="container">
-<h2>מה אומרים המטופלים</h2>
-<div class="testimonials-grid">
+
+<div class="testimonials-grid zappy-preserve-css-grid" data-original-item-width="439" data-original-gap="32px" style="grid-template-columns: 438.667px 438.667px 438.667px 0px 0px;">
 <div class="testimonial-card">
 <div class="testimonial-stars">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108255-9m3t1o943" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-sd1ypcuc6" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-54img2ydj" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-tglzrsrp1" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-qbi6nn685" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
 </div>
-<p>"מוטי שוחט עזר לבן שלי להתמודד עם חרדות קשות. אחרי חודשיים של טיפול ראינו שינוי משמעותי בביטחון העצמי שלו וביכולת שלו להתמודד עם מצבים מאתגרים. אני ממליצה בחום!"</p>
-<div class="testimonial-author">— שרה כהן, אם לילד בן 10</div>
-</div>
-<div class="testimonial-card">
-<div class="testimonial-stars">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-</div>
-<p>"הטיפול בחרדה ודיכאון עם מוטי היה מפנה דרך עבורי. הוא יצר מרחב בטוח שבו יכולתי לפתוח את הלב, והכלים שקיבלתי עוזרים לי עד היום. תודה רבה!"</p>
-<div class="testimonial-author">— דוד לוי, בן 35</div>
+<p>"מוטי פשוט עושה קסמים. אישיות נעימה, מבינה ומכילה ברמה גבוהה ביותר. מעניק מכל הלב וברוחב לב. תודה רבה!"</p>
+<div class="testimonial-author">— רונית דר</div>
 </div>
 <div class="testimonial-card">
 <div class="testimonial-stars">
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
-<i class="fas fa-star"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-f3xwhvi35" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-01yp16zdh" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-qpu0phbmx" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-ifchojvuq" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-opzp1f0kt" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
 </div>
-<p>"הטיפול הזוגי עם מוטי שוחט הציל את הנישואין שלנו. הוא עזר לנו להבין אחד את השני, לתקשר טוב יותר ולמצוא מחדש את האהבה שהייתה לנו. ממליצים בחום!"</p>
-<div class="testimonial-author">— רונית ויוסי, זוג נשוי</div>
+<p style>&nbsp; "אחרי אינספור מטפלות, אצלך הגעתי למקום הנכון ואחרי שני טיפולים שחררת אצלי משהו שחשבתי שלא יעבור לעולם. אתה אלוף. ממליצה בחום!"&nbsp;&nbsp;</p>
+<div class="testimonial-author">— נטלי ט.&nbsp;</div>
+</div>
+<div class="testimonial-card">
+<div class="testimonial-stars">
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-x922iufoq" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-4e13o4i27" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-ofsp3jflz" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-38ggcwc40" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+<i class="fas fa-star" data-element-type="icon" data-element-id="icon-1768410108256-r5abmhbjx" data-icon-type="fontawesome" style="pointer-events: auto; cursor: pointer;"></i>
+</div>
+<p style>"למרות הסקפטיות שהגעתי איתה, מצבי השתפר כבר אחרי הטיפול הראשון שיפור אדיר! תודה רבה. ממליצה לכולם"</p>
+<div class="testimonial-author">— לימור ועקנין</div>
 </div>
 </div>
 </div>
 </section>
 <section class="cta-section">
 <div class="container">
-<h2>מוכנים לצעד הראשון?</h2>
+<h2 style="font-weight: 500;">מוכנים לצעד הראשון?</h2>
 <p>אם אתם או מישהו קרוב לכם מתמודדים עם קשיים רגשיים, אני כאן כדי לעזור. פגישת הייעוץ הראשונית היא הזדמנות להכיר, לשאול שאלות ולהבין איך הטיפול יכול לסייע לכם.</p>
-<a href="/contact" class="btn-primary">קבעו פגישה עכשיו</a>
+<a id="element-saved-1767195328190-fg2ekg0r45n" href="/contact" class="btn btn-primary" style="background-color: #a8d5ba; border: 2px solid #a8d5ba; color: #ffffff; padding: 12px 24px; border-radius: 6px; transition: all 0.3s; cursor: pointer !important; text-decoration: none; display: inline-block; width: auto !important; flex: 0 0 auto !important; border-color: #a8d5ba" data-element-type="button"> לקבוע פגישה עכשיו</a>
 </div>
 </section>
-<a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+<a href="#" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer" style="display:none;">
 <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -503,11 +784,11 @@
       <div class="container">
         <div class="footer-main">
           <div class="all-rights-reserved">
-            <p>© 2025 מוטי שוחט. כל הזכויות שמורות.</p>
+            <p>© 2025 מוטי שוחט - טיפול משנה חיים. כל הזכויות שמורות.</p>
           </div>
-          <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-<a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-<a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-social"><a href="https://facebook.com/motishohat4balance" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/motishohat_life_changing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="display:none;"><i class="fab fa-whatsapp"></i></a></div>
           <div class="footer-legal">
             <a href="/privacy" aria-label="מדיניות פרטיות">
               מדיניות פרטיות
@@ -558,7 +839,7 @@
           // Apply fixed positioning styles inline (works for existing sites too)
           header.style.cssText = 'position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 99999 !important; display: flex !important; justify-content: center !important; align-items: center !important; text-align: center !important; box-sizing: border-box !important;';
           // Fix child elements that might have position: fixed from old CSS
-          var children = header.querySelectorAll('*');
+          var children = header.querySelectorAll('&nbsp;<br><span>&nbsp;מימוש והגשמה עצמית - שחרור אמונות מגבילות, חסמים, מציאת הייעוד.&nbsp;&nbsp;<br></span><br><span>הגשמה עיסקית - נבין מה יעזור להקפיץ את העסק קדימה!</span><br class="Apple-interchange-newline">');
           for (var i = 0; i < children.length; i++) {
             children[i].style.position = 'static';
           }
@@ -621,6 +902,22 @@
       if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
       else { initMobileSubmenuToggles(); }
       var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
     })();
     </script>
     <script src="/script.js"></script>

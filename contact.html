@@ -3,13 +3,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>צור קשר עם מוטי שוחט — קביעת פגישה</title>
 <meta name="description" content="צרו קשר עם מוטי שוחט לקביעת פגישת ייעוץ ראשונית. טיפול רגשי מקצועי לילדים, נוער ומבוגרים. התקשרו עכשיו או מלאו טופס יצירת קשר.">
-<meta name="keywords" content="מוטי שוחט, צור קשר, קביעת פגישה, טיפול בחרדה ודיכאון, מטפל רגשי">
+<meta name="keywords" content="מוטי שוחט - טיפול משנה חיים, צור קשר, קביעת פגישה, טיפול בחרדה ודיכאון, מטפל רגשי">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Favicons -->
     <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="22x22" href="/assets/favicon-22x22.png">
     <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
     <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
@@ -62,8 +62,8 @@
   opacity: 0.7;
 }</style>
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@2/dist/cookieconsent.css">
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@2/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
 <!-- Zappy Analytics -->
@@ -269,61 +269,44 @@
 </script>
 <!-- End Zappy Analytics -->
 
-    <style id="zappy-mobile-submenu-styles">
-      /* Mobile submenu accordion styles */
+    <style id="zappy-dropdown-submenu-styles">
+      /* ========== DESKTOP DROPDOWN SUBMENU STYLES ========== */
+      /* Base styles for dropdown submenus - parent must be positioned */
+      .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
+      /* Submenu base - hidden by default */
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      /* CRITICAL: Desktop hover styles to show dropdown */
+      .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Submenu item styling */
+      .sub-menu li { list-style: none; margin: 0; padding: 0; }
+      .sub-menu a { display: block !important; padding: 10px 16px !important; color: #333 !important; font-weight: 500; text-decoration: none; white-space: nowrap; transition: background-color 0.2s; }
+      .sub-menu a:hover { background-color: #f5f5f5; }
+      /* RTL (Hebrew/Arabic) dropdown positioning */
+      [dir="rtl"] .nav-menu .sub-menu, [dir="rtl"] nav .sub-menu, [dir="rtl"] .navbar .sub-menu, html[lang="he"] .nav-menu .sub-menu, html[lang="he"] nav .sub-menu, html[lang="he"] .navbar .sub-menu, html[lang="ar"] .nav-menu .sub-menu, html[lang="ar"] nav .sub-menu, html[lang="ar"] .navbar .sub-menu { left: auto !important; right: 0 !important; }
+      /* Hide empty dropdown menus */
+      .sub-menu:empty, .sub-menu:not(:has(li:not(.zappy-hidden-menu-item))), .sub-menu:not(:has(li)) { display: none !important; opacity: 0 !important; visibility: hidden !important; pointer-events: none !important; }
+      /* Desktop: show submenu on Menu Group hover */
+      li:has(.menu-group-title):hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
+      /* Menu Group title styling */
+      .nav-menu > li > .menu-group-title, #navMenu > li > .menu-group-title { display: inline-block; padding: 0.5rem 1rem; cursor: default; user-select: none; }
+      
+      /* ========== MOBILE SUBMENU STYLES ========== */
       @media (max-width: 768px) {
-        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu {
-          position: static !important;
-          transform: none !important;
-          box-shadow: none !important;
-          background: transparent !important;
-          margin-top: 0 !important;
-          max-height: 0;
-          overflow: hidden;
-          opacity: 0;
-          visibility: hidden;
-          transition: max-height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease, padding 0.3s ease;
-          padding: 0 !important;
-          border-radius: 0 !important;
-        }
-        .sub-menu.mobile-expanded {
-          max-height: 500px !important;
-          opacity: 1 !important;
-          visibility: visible !important;
-          padding: 8px 0 8px 16px !important;
-        }
-        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded, html[lang="ar"] .sub-menu.mobile-expanded {
-          padding: 8px 16px 8px 0 !important;
-        }
-        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu {
-          opacity: 0; visibility: hidden; pointer-events: none;
-        }
-        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded {
-          opacity: 1 !important; visibility: visible !important; pointer-events: auto !important;
-        }
-        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) {
-          display: flex !important; flex-wrap: wrap !important; align-items: center !important;
-        }
-        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a {
-          flex: 1 !important;
-        }
-        .mobile-submenu-toggle {
-          display: flex !important; align-items: center !important; justify-content: center !important;
-          width: 44px !important; height: 44px !important; background: transparent !important;
-          border: none !important; cursor: pointer !important; padding: 0 !important; margin: 0 !important;
-          flex-shrink: 0 !important; -webkit-tap-highlight-color: transparent;
-        }
-        .mobile-submenu-toggle::after {
-          content: '' !important; display: block !important; width: 0 !important; height: 0 !important;
-          border-left: 6px solid transparent !important; border-right: 6px solid transparent !important;
-          border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important;
-        }
+        .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { position: static !important; transform: none !important; box-shadow: none !important; background: transparent !important; max-height: 0; overflow: hidden; opacity: 0; visibility: hidden; transition: max-height 0.3s ease, opacity 0.3s ease; padding: 0 !important; border-radius: 0 !important; }
+        .sub-menu.mobile-expanded { max-height: 500px !important; opacity: 1 !important; visibility: visible !important; padding: 8px 0 8px 16px !important; }
+        [dir="rtl"] .sub-menu.mobile-expanded, html[lang="he"] .sub-menu.mobile-expanded { padding: 8px 16px 8px 0 !important; }
+        /* Disable hover behavior on mobile */
+        .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 0; visibility: hidden; pointer-events: none; }
+        .nav-menu li > .sub-menu.mobile-expanded, nav li > .sub-menu.mobile-expanded, .navbar li > .sub-menu.mobile-expanded, #navMenu li > .sub-menu.mobile-expanded { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+        .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { display: flex !important; flex-wrap: wrap !important; align-items: center !important; }
+        .nav-menu li:has(.sub-menu) > a, nav li:has(.sub-menu) > a, .navbar li:has(.sub-menu) > a, #navMenu li:has(.sub-menu) > a { flex: 1 !important; }
+        .nav-menu li:has(.sub-menu) > a [class*="chevron"], .nav-menu li:has(.sub-menu) > a [class*="arrow"], .nav-menu li:has(.sub-menu) > a .fa-chevron-down, .nav-menu li:has(.sub-menu) > a .fa-angle-down, nav li:has(.sub-menu) > a [class*="chevron"], nav li:has(.sub-menu) > a [class*="arrow"], #navMenu li:has(.sub-menu) > a [class*="chevron"], #navMenu li:has(.sub-menu) > a [class*="arrow"] { display: none !important; visibility: hidden !important; }
+        .mobile-submenu-toggle { display: flex !important; align-items: center !important; justify-content: center !important; width: 44px !important; height: 44px !important; background: transparent !important; border: none !important; cursor: pointer !important; }
+        .mobile-submenu-toggle::after { content: '' !important; width: 0 !important; height: 0 !important; border-left: 6px solid transparent !important; border-right: 6px solid transparent !important; border-top: 7px solid currentColor !important; transition: transform 0.3s ease !important; }
         .mobile-submenu-toggle.expanded::after { transform: rotate(180deg) !important; }
-        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu, .navbar li:has(.sub-menu) > .sub-menu, #navMenu li:has(.sub-menu) > .sub-menu {
-          flex-basis: 100% !important; width: 100% !important;
-        }
-        .sub-menu a { padding: 10px 0 !important; display: block !important; font-size: 14px !important; }
-        .sub-menu a:hover { background-color: transparent !important; }
+        .nav-menu li:has(.sub-menu) > .sub-menu, nav li:has(.sub-menu) > .sub-menu { flex-basis: 100% !important; width: 100% !important; }
+        .sub-menu a { padding: 10px 0 !important; display: block !important; }
+        .nav-menu li:has(.sub-menu) > .menu-group-title, nav li:has(.sub-menu) > .menu-group-title, .navbar li:has(.sub-menu) > .menu-group-title, #navMenu li:has(.sub-menu) > .menu-group-title { flex: 1 !important; }
       }
       @media (min-width: 769px) { .mobile-submenu-toggle { display: none !important; } }
     </style>
@@ -339,12 +322,12 @@
 <div class="container nav-container">
 <div class="nav-brand">
 <a href="/" class="logo-link">
-<img src="/assets/logo.webp" alt="מוטי שוחט" class="logo" />
+<img src="/assets/logo-1767196020267-5m6ksg.webp?v=1767196020784-rmtw8a" alt="מוטי שוחט - טיפול משנה חיים" class="logo">
 </a>
 </div>
 <button class="mobile-toggle" id="mobileToggle" aria-label="תפריט">
 <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-<path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+<path d="M2 12h18M2 6h18M2 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
 </svg>
 <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
 <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
@@ -352,7 +335,7 @@
 </button>
 <button class="phone-header-btn" aria-label="התקשרו אלינו">
 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+<path d="M22 16.92v2a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.62-2.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-2.07-8.67A2 2 0 0 1 4.11 2h2a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
 </svg>
 </button>
 <ul class="nav-menu" id="navMenu">
@@ -360,72 +343,77 @@
 <li><a href="/about">אודות</a></li>
 </ul>
 <div class="nav-cta-container">
-<li class="nav-cta-item"><a href="/contact" class="nav-cta-btn">צור קשר</a></li>
+<li class="nav-cta-item"><a href="#" class="nav-cta-btn" data-original-href="#" style="background-color: #6ba2d4 !important; border-color: #6ba2d4 !important; color: #ffffff !important">צור קשר</a></li>
 </div>
 </div>
 </nav>
 <section class="page-header">
 <div class="container">
 <h1>צרו קשר ונתחיל את המסע</h1>
-<h3>אשמח לענות על כל שאלה ולקבוע פגישת ייעוץ ראשונית</h3>
+<h2>אשמח לענות על כל שאלה ולקבוע פגישת ייעוץ ראשונית</h2>
 </div>
 </section>
-<section class="contact-main">
+<section class="contact-main" id="zappy-section-1">
 <div class="container">
 <div class="contact-layout">
 <div class="contact-info-section">
-<h2>פרטי התקשרות</h2>
-<p>אתם מוזמנים ליצור איתי קשר בכל דרך שנוחה לכם. אשמח לשוחח איתכם, לענות על שאלות ולקבוע פגישת ייעוץ ראשונית.</p>
+<h2 style="font-weight: 500;">פרטי התקשרות</h2>
+<p style="">אתם מוזמנים ליצור איתי קשר בכל דרך שנוחה לכם. אשמח לשוחח איתכם, לענות על שאלות ולקבוע פגישת ייעוץ ראשונית בטלפון ללא עלות ומכל הלב.</p>
 <div class="contact-details">
 <div class="contact-detail-item">
-<i class="fas fa-phone"></i>
+<i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1768405304604-oloquf8lv" data-icon-type="fontawesome"></i>
 <div>
-<h3>טלפון</h3>
-<a href="tel:[business_phone]">[business_phone]</a>
+<h2>טלפון</h2>
+<a href="tel:0546850707" data-original-href="tel:0546850707">0546850707</a>
 </div>
 </div>
 <div class="contact-detail-item">
-<i class="fas fa-envelope"></i>
+<i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1768405304605-zsxkl1nx1" data-icon-type="fontawesome"></i>
 <div>
-<h3>דואר אלקטרוני</h3>
-<a href="mailto:[business_email]">[business_email]</a>
+<h2 style="">דואר אלקטרוני</h2>
+<a href="mailto:[]" data-original-href="mailto:[]" data-native-element="true" data-element-id="btn-1768405416218-y81dnhl94" data-element-type="button" style="outline: none;">motisbb@gmail.com</a>
 </div>
 </div>
 <div class="contact-detail-item">
-<i class="fas fa-map-marker-alt"></i>
+<i class="fas fa-map-marker-alt" data-element-type="icon" data-element-id="icon-1768405304605-g4zrvr8d8" data-icon-type="fontawesome"></i>
 <div>
-<h3>כתובת</h3>
-<p>[business_address]</p>
+<h2>כתובת</h2>
+<p style=""><font color="#4a90c4">כתובת החברה, גבעת שמואל, ישראל</font></p>
 </div>
 </div>
 <div class="contact-detail-item">
-<i class="fas fa-clock"></i>
+<i class="fas fa-clock" data-element-type="icon" data-element-id="icon-1768405304605-j9exdy7e1" data-icon-type="fontawesome"></i>
 <div>
-<h3>שעות פעילות</h3>
-<p>ראשון - חמישי: 9:00 - 20:00</p>
-<p>שישי: 9:00 - 13:00</p>
+<h2>שעות פעילות</h2>
+<p><font color="#4a90c4">יום ראשון: 08:00 - 14:00</font></p>
+<p><font color="#4a90c4">יום שני: 07:00 - 14:00</font></p>
+<p><font color="#4a90c4">יום שלישי: 07:00 - 21:00</font></p>
+<p><font color="#4a90c4">יום רביעי: 07:00 - 20:30</font></p>
+<p><font color="#4a90c4">יום חמישי: 07:00 - 20:30</font></p>
+<p><font color="#4a90c4">יום שישי: 09:00 - 14:00</font></p>
+<p><font color="#4a90c4">יום שבת: סגור</font></p>
 </div>
 </div>
 </div>
 </div>
 <div class="contact-form-section">
-<h2>שלחו הודעה</h2>
+<h2 style="font-weight: 500;">שלחו הודעה</h2>
 <form class="contact-form" id="contactForm">
 <div class="form-group">
 <label for="name">שם מלא <span class="required">*</span></label>
-<input type="text" id="name" name="name" required="">
+<input type="text" id="name" name="name" required="" fdprocessedid="b3ew3f">
 </div>
 <div class="form-group">
 <label for="email">דואר אלקטרוני <span class="required">*</span></label>
-<input type="email" id="email" name="email" required="">
+<input type="email" id="email" name="email" required="" fdprocessedid="zh6qyv">
 </div>
 <div class="form-group">
 <label for="phone">טלפון <span class="required">*</span></label>
-<input type="tel" id="phone" name="phone" required="">
+<input type="tel" id="phone" name="phone" required="" fdprocessedid="x63baw">
 </div>
 <div class="form-group">
 <label for="subject">נושא</label>
-<select id="subject" name="subject">
+<select id="subject" name="subject" fdprocessedid="l0tqv4" class="zappy-editable-dropdown">
 <option value="">בחר נושא</option>
 <option value="child">טיפול לילדים</option>
 <option value="teen">טיפול לנוער</option>
@@ -441,9 +429,9 @@
 </div>
 <div class="form-group checkbox-group">
 <input type="checkbox" id="consent" name="consent" required="">
-<label for="consent">אני מסכים/ה <a href="/terms" target="_blank">לתנאי השימוש</a></label>
+<label for="consent">אני מסכים/ה <a href="/terms" target="_blank" data-original-href="/terms">לתנאי השימוש</a></label>
 </div>
-<button type="submit" class="btn-primary">שלח הודעה</button>
+<button type="submit" class="btn-primary" fdprocessedid="82henm" data-element-type="button" data-element-id="btn-1768405304601-rjyf42k1m" data-native-element="true">שלח הודעה</button>
 </form>
 </div>
 </div>
@@ -451,65 +439,51 @@
 </section>
 <section class="faq-section">
 <div class="container">
-<h2>שאלות נפוצות</h2>
-<div class="faq-grid">
-<div class="faq-item">
-<h3>כמה זמן אורך תהליך טיפולי?</h3>
-<p>משך הטיפול משתנה בהתאם לצרכים האישיים של כל מטופל. יש תהליכים קצרים של מספר מפגשים, ויש תהליכים ארוכים יותר. בפגישת ההיכרות נוכל להעריך יחד את משך הזמן המשוער.</p>
-</div>
-<div class="faq-item">
-<h3>מה קורה בפגישה הראשונה?</h3>
-<p>בפגישה הראשונה נכיר, נדבר על הקשיים והציפיות שלך מהטיפול, ונבדוק אם יש התאמה טיפולית. זה גם הזמן לשאול שאלות ולהבין איך הטיפול יכול לעזור.</p>
-</div>
-<div class="faq-item">
-<h3>האם הטיפול מתאים לילדים?</h3>
-<p>בהחלט! אני מתמחה בטיפול רגשי לילדים ומשתמש בגישות מותאמות גיל, כולל משחק טיפולי ואמנות. הטיפול כולל גם הדרכת הורים.</p>
-</div>
-<div class="faq-item">
-<h3>האם אפשר לקבוע פגישות בשעות גמישות?</h3>
-<p>כן, אני מציע שעות פגישה גמישות כדי להתאים ללוח הזמנים שלך. ניתן לתאם פגישות גם בשעות הערב.</p>
-</div>
-<div class="faq-item">
-<h3>מה המחיר של פגישה?</h3>
-<p>המחיר משתנה בהתאם לסוג הטיפול ולמשך המפגש. בפגישת ההיכרות נוכל לדבר על המחירים ולמצוא פתרון המתאים לך.</p>
-</div>
-<div class="faq-item">
-<h3>האם הטיפול סודי?</h3>
-<p>כן, כל מה שנאמר בטיפול נשאר סודי ומוגן על פי חוק. סודיות היא אחד העקרונות המרכזיים בעבודה הטיפולית.</p>
-</div>
-</div>
+<h2 style="font-weight: 500;">שאלות נפוצות</h2>
+<div class="faq-grid zappy-preserve-css-grid" style="display: grid; --zappy-grid-cols: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);" data-original-item-width="250" data-original-gap="32px"><div class="faq-item">
+<h3 class="">כמה זמן אורך תהליך טיפולי?</h3>
+<p class="">משך הטיפול משתנה בהתאם לצרכים האישיים של כל מטופל.&nbsp;<br>יש תהליכים קצרים של מספר מפגשים, ויש תהליכים ארוכים יותר. (ועדיין קצרי מועד)<br>לאחר הפגישה השניה נוכל להעריך יחד את משך הזמן המשוער.<br class="Apple-interchange-newline"></p>
+</div><div class="faq-item">
+<h3 class="">מה קורה בפגישה הראשונה?</h3>
+<p class="">בפגישה הראשונה נכיר, נדבר על הקשיים והציפיות שלך מהטיפול, ונבדוק אם יש התאמה טיפולית. זה גם הזמן לשאול שאלות ולהבין איך הטיפול יכול לעזור.</p>
+</div><div class="faq-item">
+<h3 class="">האם אפשר לקבוע פגישות בשעות גמישות?</h3>
+<p class="">כן, אני מציע שעות פגישה גמישות כדי להתאים ללוח הזמנים שלך.&nbsp;<br>ניתן לתאם פגישות גם בשעות הערב וימי שישי.<br class="Apple-interchange-newline"></p>
+</div><div class="faq-item">
+<h3 class="">מה המחיר של פגישה?</h3>
+<p class="">המחיר משתנה בהתאם לסוג הטיפול ולמשך המפגש.&nbsp;<br>בשיחת הטלפון הראשונית נוכל לדבר על המחירים ולמצוא פתרון המתאים לך.</p>
+</div><div class="faq-item">
+<h3 class="">האם הטיפול סודי?</h3>
+<p class="">כן, כל מה שנאמר בטיפול נשאר סודי ומוגן על פי חוק. סודיות היא אחד העקרונות המרכזיים בעבודה הטיפולית.</p>
+</div></div>
 </div>
 </section>
 <section class="next-steps-section">
 <div class="container">
-<h2>מה קורה אחרי שתצרו קשר?</h2>
-<div class="steps-grid">
-<div class="step-box">
+<h2 style="font-weight: 500;">מה קורה אחרי שתצרו קשר?</h2>
+<div class="steps-grid zappy-preserve-css-grid" style="display: grid; --zappy-grid-cols: minmax(0, 1fr) minmax(0, 1fr);" data-original-item-width="429" data-original-gap="22px"><div class="step-box">
 <div class="step-num">1</div>
-<h3>שיחת טלפון ראשונית</h3>
-<p>אחזור אליכם תוך 24 שעות לשיחת היכרות קצרה ותיאום פגישה ראשונית.</p>
-</div>
-<div class="step-box">
+<h2 class="">שיחת טלפון ראשונית</h2>
+<p class="" style="">אחזור אליכם תוך 24 שעות לשיחת היכרות קצרה בטלפון.<br>בשיחה אבין באיזה נושא מדובר,&nbsp;<br>אסביר כיצד מתבצע האבחון והטיפול,<br>נתאם ציפיות ונבדוק אם יש התאמה טיפולית. <br><br class="Apple-interchange-newline"></p>
+</div><div class="step-box">
 <div class="step-num">2</div>
-<h3>פגישת ייעוץ ראשונית</h3>
-<p>נפגש להכרות, נדבר על הקשיים והציפיות, ונבדוק אם יש התאמה טיפולית.</p>
-</div>
-<div class="step-box">
-<div class="step-num">3</div>
-<h3>תחילת התהליך</h3>
-<p>אם נחליט להמשיך, נתחיל את התהליך הטיפולי המותאם אישית לצרכים שלך.</p>
-</div>
-</div>
+<h2 class="">תחילת התהליך</h2>
+<p class="">
+
+במידה ויתאים ונחליט להמשיך-&nbsp;<br>נתאם, פגישת טיפול ראשונה&nbsp;<br>ונתחיל את התהליך הטיפולי המותאם אישית לצרכים שלך.
+
+</p>
+</div></div>
 </div>
 </section>
-<section class="cta-section">
+<section class="cta-section" id="zappy-section-4">
 <div class="container">
-<h2>מוכנים לצעד הראשון?</h2>
+<h2 style="font-weight: 500;">מוכנים לצעד הראשון?</h2>
 <p>השינוי מתחיל בהחלטה לפנות לעזרה. אני כאן כדי ללוות אתכם בדרך.</p>
-<a href="#contactForm" class="btn-primary">מלאו את הטופס עכשיו</a>
+<a href="#contactForm" class="btn-primary" data-original-href="#contactForm" data-element-type="button" data-element-id="btn-1768402143009-fjfz7um7k" data-native-element="true" style="outline: none;"><span style="font-weight:normal;" id="docs-internal-guid-b3e20a61-7fff-98ef-bf04-22f8fe69dcde"><p dir="rtl" style="line-height: 2.04; margin-top: 0pt; margin-bottom: 12pt;"><span><span style="font-size: 11pt; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space-collapse: preserve;" class=""><b>כן מוטי!&nbsp;</b></span><span style="font-size: 11pt; color: rgb(67, 67, 67); background-color: transparent; font-variant-numeric: normal; font-variant-east-asian: normal; font-variant-alternates: normal; font-variant-position: normal; font-variant-emoji: normal; vertical-align: baseline; white-space-collapse: preserve;" class=""><b>אשמח לשמוע כיצד לחולל שינוי ולשפר את חיי ובריאותי</b></span></span></p></span></a>
 </div>
 </section>
-<a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
+<a href="#" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer" style="display:none;">
 <i class="fab fa-whatsapp"></i>
 </a>
 
@@ -518,11 +492,11 @@
       <div class="container">
         <div class="footer-main">
           <div class="all-rights-reserved">
-            <p>© 2025 מוטי שוחט. כל הזכויות שמורות.</p>
+            <p>© 2025 מוטי שוחט - טיפול משנה חיים. כל הזכויות שמורות.</p>
           </div>
-          <div class="footer-social"><a href="https://facebook.com/[facebook_handle]" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-<a href="https://instagram.com/[instagram_handle]" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-<a href="https://wa.me/[whatsapp_handle]" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a></div>
+          <div class="footer-social"><a href="https://facebook.com/motishohat4balance" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://instagram.com/motishohat_life_changing/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+<a href="#" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" style="display:none;"><i class="fab fa-whatsapp"></i></a></div>
           <div class="footer-legal">
             <a href="/privacy" aria-label="מדיניות פרטיות">
               מדיניות פרטיות
@@ -547,14 +521,14 @@
 <!-- Zappy Attribution Header Script -->
 <script>
 (function() {
-  var websiteId = '14d3f29f-7ce0-41ad-a4c8-1c5b00e1d5aa';
+  var websiteId = '14d2f29f-7ce0-41ad-a4c8-1c5b00e1d5aa';
   
   // Don't show header in preview mode
   var currentUrl = window.location.href;
   var isPreview = currentUrl.includes('/preview/') || 
                   currentUrl.includes('/preview-fullscreen/') || 
                   currentUrl.includes('localhost:5001') ||
-                  currentUrl.includes('localhost:3000');
+                  currentUrl.includes('localhost:2000');
   
   if (isPreview) {
     return; // Exit early in preview mode
@@ -636,6 +610,22 @@
       if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initMobileSubmenuToggles); }
       else { initMobileSubmenuToggles(); }
       var resizeTimer; window.addEventListener('resize', function() { clearTimeout(resizeTimer); resizeTimer = setTimeout(initMobileSubmenuToggles, 250); });
+      // Re-initialize when mobile menu becomes visible (MutationObserver)
+      var observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes') {
+            var target = mutation.target;
+            if (target.classList && (target.classList.contains('active') || target.classList.contains('open'))) {
+              setTimeout(initMobileSubmenuToggles, 100);
+            }
+          }
+        });
+      });
+      setTimeout(function() {
+        document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu, nav').forEach(function(menu) {
+          observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
+        });
+      }, 500);
     })();
     </script>
     <script src="/script.js"></script>

@@ -1,57 +1,47 @@
-# מוטי שוחט — Generative Engine Optimization Map
-
-> A בריאות נפשית וטיפול רגשי business.
+# Business — Generative Engine Optimization Map
 
 ---
 
 ## Pages
 
 ### בית
-https://-14d3f29f.zappy5.app
+https://example.com
 מוטי שוחט מציע טיפול רגשי מקצועי לילדים, נוער ומבוגרים. התמחות בטיפול בחרדה ודיכאון, טיפול זוגי ומטפל רגשי בתת מודע. פנו עכשיו!
 
 ### שירותים
-https://-14d3f29f.zappy5.app/services
+https://example.com/services
 מגוון שירותי טיפול רגשי: טיפול בחרדה ודיכאון, טיפול זוגי, עבודה עם התת מודע, טיפול לילדים ונוער. מוטי שוחט מציע פתרונות טיפוליים מותאמים אישית.
 
 ### אודות
-https://-14d3f29f.zappy5.app/about
+https://example.com/about
 הכירו את מוטי שוחט, מטפל רגשי בעל ניסיון רב בטיפול בחרדה ודיכאון, טיפול זוגי ועבודה עם התת מודע. גישה אישית ומקצועית לכל מטופל.
 
 ### צור קשר
-https://-14d3f29f.zappy5.app/contact
+https://example.com/contact
 צרו קשר עם מוטי שוחט לקביעת פגישת ייעוץ ראשונית. טיפול רגשי מקצועי לילדים, נוער ומבוגרים. התקשרו עכשיו או מלאו טופס יצירת קשר.
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://-14d3f29f.zappy5.app/privacy
+https://example.com/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://-14d3f29f.zappy5.app/terms
+https://example.com/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://-14d3f29f.zappy5.app/accessibility
+https://example.com/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
 
 # Business Context (for LLM understanding)
 
-## About מוטי שוחט
-מוטי שוחט is a business in the בריאות נפשית וטיפול רגשי industry.
-
-## Target Audience
-ילדים, נוער ומבוגרים עם בעיות רגשיות
-
-## Industry
-בריאות נפשית וטיפול רגשי
-
+## About Business
 ---
 
 # Additional Resources
 
-- **Sitemap**: https://-14d3f29f.zappy5.app/sitemap.xml
-- **Robots.txt**: https://-14d3f29f.zappy5.app/robots.txt
+- **Sitemap**: https://example.com/sitemap.xml
+- **Robots.txt**: https://example.com/robots.txt
